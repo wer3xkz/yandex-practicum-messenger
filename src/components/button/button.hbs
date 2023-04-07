@@ -1,0 +1,15 @@
+<button
+    class="{{block}} {{classModifier block "theme" theme}} {{classModifier block "skin" skin}} {{classes}}"
+    {{#if disabled}}disabled{{/if}}
+    type="{{type}}"
+>
+    {{#if icon}}
+        {{> c-icon newContext name=icon size=iconSize}}
+    {{/if}}
+    {{#if label}}
+        <span class="{{classElement block "label"}}">
+            {{label}}
+        </span>
+    {{/if}}
+</button>
+

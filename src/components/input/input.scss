@@ -1,0 +1,71 @@
+@use 'src/themes/colors' as c;
+@use "src/themes/vars";
+
+.c-input {
+  $block: &;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  &__field {
+    position: relative;
+    padding: 0 10px;
+    height: 37px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid c.$primary;
+    background: transparent;
+    color: c.$dark;
+
+    &::placeholder {
+      transition: color .1s;
+      color: c.$disabled;
+    }
+
+    &:focus {
+      border-bottom: 2px solid c.$accent;
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
+    &:focus + #{$block}__label, &:not(:placeholder-shown) + #{$block}__label {
+      top: -10px;
+      opacity: 1;
+      font-size: vars.$base-font-size * .6;
+    }
+
+    &:disabled {
+      border-color: c.$disabled;
+    }
+
+    &_has-error {
+      border-color: c.$danger;
+
+      & + #{$block}__error-message {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__error-message {
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    font-size: 10px;
+    color: c.$danger;
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  &__label {
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 10px;
+    color: c.$disabled;
+    transition: top .3s, opacity .1s, font-size .3s;
+  }
+}

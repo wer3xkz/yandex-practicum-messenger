@@ -1,0 +1,35 @@
+@use "themes/reset";
+@use "themes/typography";
+@use "themes/vars" as vars;
+@use "themes/partials";
+@use "themes/globals";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: vars.$base-font-size;
+  font-family: vars.$font-family;
+  line-height: vars.$line-height;
+  background-color: #e5e5f7;
+  background-image:  radial-gradient(#9096ff 1px, transparent 1px), radial-gradient(#9096ff 1px, #e5e5f7 1px);
+  background-size: 40px 40px;
+  background-position: 0 0,20px 20px;
+}
+
+#app {
+  height: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &_center {
+    align-items: center;
+    justify-content: center;
+  }
+}
+

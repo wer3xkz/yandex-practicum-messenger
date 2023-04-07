@@ -1,0 +1,18 @@
+<div class="{{block}}">
+    <label for="avatar" class="{{classElement block "picture"}}" data-text="Поменять
+аватар">
+        {{#if data.avatar}}
+            {{> c-avatar newContext src=data.avatar alt=data.display_name}}
+        {{else}}
+            {{> c-icon newContext name="no-photo" size="large"}}
+        {{/if}}
+        {{> c-input newContext name="avatar" id="avatar" size="large" type="file" accept="image/*" hidden=true}}
+    </label>
+    <div class="{{classElement block "actions"}}">
+        {{> c-button newContext label="Отменить" theme="danger" skin="clear"}}
+        {{> c-button newContext label="Сохранить"}}
+    </div>
+    <div class="{{classElement block "name"}}">
+        {{data.display_name}}
+    </div>
+</div>

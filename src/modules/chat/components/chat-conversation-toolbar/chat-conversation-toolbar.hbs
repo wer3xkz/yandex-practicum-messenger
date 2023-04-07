@@ -1,0 +1,11 @@
+<div class="{{block}}">
+    <div class="{{classElement block "avatar"}}">
+        {{> c-avatar newContext src=data.avatarUrl alt=data.name size="small"}}
+    </div>
+    <div class="{{classElement block "info"}}">
+        {{data.name}}
+    </div>
+    <div class="{{classElement block "actions"}}">
+        {{> c-button newContext skin="fab" icon="more"}}
+    </div>
+</div>

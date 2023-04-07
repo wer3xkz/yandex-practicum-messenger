@@ -1,0 +1,75 @@
+@use 'src/themes/colors' as c;
+
+.c-chat-message {
+  $block: &;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 114px;
+  max-width: 402px;
+  background-color: c.$light-primary;
+  border: 1px solid c.$light-primary;
+  border-radius: 12px 12px 0 12px;
+  overflow: hidden;
+  align-self: flex-end;
+
+  &[data-direction="incoming"] {
+    background-color: c.$gray;
+    border-color: c.$gray;
+    border-radius: 0 12px 12px 12px;
+    align-self: flex-start;
+  }
+
+  &__name {
+    font-weight: 600;
+    padding: 5px 10px;
+
+    & + #{$block}__text {
+      padding-top: 5px;
+      border-top: 1px dashed c.$light-primary;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 10px;
+    color: c.$dark;
+    white-space: pre-wrap;
+  }
+
+  &__attachments {
+    & + #{$block}__status {
+      bottom: 10px;
+      right: 10px;
+      background-color: c.$disabled;
+      .c-time {
+        color: c.$white;
+      }
+    }
+  }
+
+  &__images {
+    .c-image__picture {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__status {
+    position: absolute;
+    bottom: 0;
+    right: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    height: 13px;
+    min-width: 37px;
+    padding: 0 7px;
+    border-radius: 30px;
+  }
+}

@@ -1,0 +1,14 @@
+<header class="{{block}}">
+    <nav class="{{classElement block "navigation"}}">
+        {{> c-link newContext href="/profile" label="Профиль" icon="arrow" iconSize="small"}}
+    </nav>
+
+    <div class="{{classElement block "tools"}}">
+        <div class="{{classElement block "searchbar"}}">
+            <label for="chat-search" class="{{classElement block "searchbar-label"}}">
+                {{> c-icon newContext name="search"}}
+            </label>
+            {{> c-input newContext id="chat-search" placeholder="Поиск"}}
+        </div>
+    </div>
+</header>

@@ -1,0 +1,10 @@
+@use 'src/themes/colors' as c;
+
+.c-time {
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 13px;
+  letter-spacing: 0;
+  text-align: right;
+  color: c.$disabled;
+}

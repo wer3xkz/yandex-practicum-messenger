@@ -1,0 +1,10 @@
+<div class="{{block}}">
+    <form class="{{classElement block "form"}}">
+        {{> c-input newContext id="login" name="login" label="Ваш логин" placeholder="Логин"}}
+        {{> c-input newContext id="password" name="password" label="Ваш пароль" placeholder="Пароль" type="password"}}
+        <div class="{{classElement block "actions"}}">
+            {{> c-button newContext label="Войти" type="submit"}}
+            {{> c-link newContext label="Нет аккаунта?" href="/sign-in"}}
+        </div>
+    </form>
+</div>

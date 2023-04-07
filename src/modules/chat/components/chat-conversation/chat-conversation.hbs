@@ -1,0 +1,10 @@
+<div class="{{block}}">
+    <div class="{{classElement block "messages"}}">
+        {{#each data.messages}}
+            {{#if (prevMessageDateNotSame ../data.messages @index)}}
+                <div class="{{classElement ../block "date-break"}}">{{msToDate this.time}}</div>
+            {{/if}}
+            {{> c-chat-message newContext data=this}}
+        {{/each}}
+    </div>
+</div>

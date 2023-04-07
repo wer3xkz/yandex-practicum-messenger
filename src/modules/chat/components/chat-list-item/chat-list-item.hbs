@@ -1,0 +1,24 @@
+<div class="{{block}} {{#if isActive}}{{classModifier block "is-active" undefined}}{{/if}}">
+    <div class="{{classElement block "avatar"}}">
+        {{> c-avatar newContext src=data.avatarUrl alt=data.name}}
+    </div>
+    <div class="{{classElement block "info"}}">
+        <div class="{{classElement block "info-row"}}">
+            <span class="{{classElement block "name"}}">{{data.name}}</span>
+            {{> c-time newContext time=data.lastMessage.time}}
+        </div>
+        <div class="{{classElement block "info-row"}}">
+            <span class="{{classElement block "message"}}">
+                {{#if data.lastMessage.author}}
+                <span class="{{classElement block "message-author"}}">
+                    {{data.lastMessage.author}}:
+                </span>
+                {{/if}}
+                {{defValue data.lastMessage.text "Пусто..."}}
+            </span>
+            {{#if data.unreadCount}}
+                {{> c-badge newContext value=data.unreadCount}}
+            {{/if}}
+        </div>
+    </div>
+</div>

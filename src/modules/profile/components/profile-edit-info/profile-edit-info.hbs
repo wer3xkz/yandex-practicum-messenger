@@ -1,0 +1,30 @@
+<form class="{{block}}">
+    <div class="g-table">
+        <div class="g-table__row">
+            <div class="g-table__row-label">Почта</div>
+            {{> c-input newContext name="email" placeholder="Ваша почта" value=data.email}}
+        </div>
+        <div class="g-table__row">
+            <div class="g-table__row-label">Логин</div>
+            {{> c-input newContext name="login" placeholder="Ваш логин" value=data.login}}
+        </div>
+        <div class="g-table__row">
+            <div class="g-table__row-label">Имя</div>
+            {{> c-input newContext name="first_name" placeholder="Выше имя" value=data.first_name}}
+        </div>
+        <div class="g-table__row">
+            <div class="g-table__row-label">Фамилия</div>
+            {{> c-input newContext name="second_name" placeholder="Ваша фамилия" value=data.second_name}}
+        </div>
+        <div class="g-table__row">
+            <div class="g-table__row-label">Имя в чате</div>
+            {{> c-input newContext name="display_name" placeholder="Ваше имя в чате" value=data.display_name}}
+        </div>
+        <div class="g-table__row">
+            <div class="g-table__row-label">Телефон</div>
+            {{> c-input newContext name="phone" placeholder="Ваш телефон" value=data.phone}}
+        </div>
+    </div>
+
+    {{> c-button newContext label="Сохранить" type="submit" classes=(classElement block "submit")}}
+</form>

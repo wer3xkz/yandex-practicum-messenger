@@ -1,0 +1,25 @@
+@use 'src/themes/colors' as c;
+@use 'src/themes/vars' as v;
+
+.c-chat-conversation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: v.$h-c-chat-conversation;
+  overflow-y: auto;
+
+  &__messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  &__date-break {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}

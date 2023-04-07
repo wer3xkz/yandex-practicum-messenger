@@ -1,0 +1,31 @@
+<div class="{{block}} {{classes}}">
+
+    <input class="{{classElement block "field"}}"
+           id="{{id}}"
+           name="{{name}}"
+           type="{{type}}"
+           placeholder="{{placeholder}}"
+           {{#if disabled}}disabled{{/if}}
+           {{#if value}}value="{{value}}" {{/if}}
+           {{#if (equal type "number")}}
+               {{#if min}}min="{{min}}" {{/if}}
+               {{#if max}}max="{{max}}" {{/if}}
+           {{/if}}
+           {{#if (equal type "text")}}
+               {{#if maxlength}}maxlength="{{maxlength}}" {{/if}}
+           {{/if}}
+           {{#if required}}
+                required
+           {{/if}}
+           {{#if hidden}}
+                hidden
+           {{/if}}
+           {{#if accept}}
+                accept="{{accept}}"
+           {{/if}}
+    />
+    {{#if label}}
+        <label class="{{classElement block "label"}}" for="{{id}}">{{label}}</label>
+    {{/if}}
+    <span class="{{classElement block "error-message"}}">{{errorMessage}}</span>
+</div>

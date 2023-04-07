@@ -1,0 +1,13 @@
+$base-font-size: 16px;
+$font-family: 'Roboto', sans-serif;
+$line-height: 1.6;
+
+//breakpoints
+$phone: 375px;
+$tablet: 768px;
+$desktop: 1024px;
+
+//els sizes
+$h-chat-conversation-toolbar: 44px;
+$h-c-chat-message-input: 44px;
+$h-c-chat-conversation: calc(100% - ($h-chat-conversation-toolbar + $h-c-chat-message-input));

@@ -1,0 +1,18 @@
+<div class="{{block}}">
+    <div class="{{ classElement block "side"}}">
+        {{> c-link newContext href="javascript:history.back()" icon="send" iconSize="large"}}
+    </div>
+    <section  class="{{ classElement block "section"}}">
+        <div  class="{{ classElement block "content"}}">
+            {{> c-profile-avatar newContext data=profile}}
+
+            {{#if (equal state "edit")}}
+                {{> c-profile-edit-info newContext data=profile}}
+            {{else if (equal state "change-password")}}
+                {{> c-profile-change-password newContext}}
+            {{else}}
+                {{> c-profile-info newContext data=profile}}
+            {{/if}}
+        </div>
+    </section>
+</div>

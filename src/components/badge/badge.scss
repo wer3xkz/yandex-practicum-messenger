@@ -1,0 +1,27 @@
+@use 'src/themes/colors' as c;
+
+.c-badge {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 20px;
+  min-width: 20px;
+  border-radius: 10px;
+  color: c.$white;
+  background-color: c.$primary;
+  font-size: 11px;
+  line-height: 12px;
+
+  &_theme {
+    &_warning {
+      background-color: c.$warn;
+    }
+    &_danger {
+      background-color: c.$danger;
+    }
+    &_disabled {
+      background-color: c.$disabled;
+    }
+  }
+}

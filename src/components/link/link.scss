@@ -1,0 +1,37 @@
+@use 'src/themes/colors' as c;
+@use 'src/themes/vars';
+
+.c-link {
+  $block: &;
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: c.$primary;
+
+  &__label {
+    font-size: vars.$base-font-size;
+    font-family: vars.$font-family;
+    pointer-events: none;
+  }
+
+  &_theme {
+    &_warning {
+      color: c.$warn;
+    }
+    &_danger {
+      color: c.$danger;
+    }
+  }
+
+  &:disabled, &_disabled {
+    cursor: default;
+    color: c.$disabled;
+  }
+
+  &:hover {
+    opacity: .95;
+  }
+}

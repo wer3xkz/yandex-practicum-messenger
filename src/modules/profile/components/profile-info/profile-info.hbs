@@ -1,0 +1,52 @@
+<div class="{{block}}">
+    <div class="g-table">
+    {{#if data.email}}
+        <div class="g-table__row">
+            <div class="g-table__row-label">Почта</div>
+            <div class="g-table__row-value">{{data.email}}</div>
+        </div>
+    {{/if}}
+    {{#if data.login}}
+        <div class="g-table__row">
+            <div class="g-table__row-label">Логин</div>
+            <div class="g-table__row-value">{{data.login}}</div>
+        </div>
+    {{/if}}
+    {{#if data.first_name}}
+        <div class="g-table__row">
+            <div class="g-table__row-label">Имя</div>
+            <div class="g-table__row-value">{{data.first_name}}</div>
+        </div>
+    {{/if}}
+    {{#if data.second_name}}
+        <div class="g-table__row">
+            <div class="g-table__row-label">Фамилия</div>
+            <div class="g-table__row-value">{{data.second_name}}</div>
+        </div>
+    {{/if}}
+    {{#if data.display_name}}
+        <div class="g-table__row">
+            <div class="g-table__row-label">Имя в чате</div>
+            <div class="g-table__row-value">{{data.display_name}}</div>
+        </div>
+    {{/if}}
+    {{#if data.phone}}
+        <div class="g-table__row">
+            <div class="g-table__row-label">Телефон</div>
+            <div class="g-table__row-value">{{data.phone}}</div>
+        </div>
+    {{/if}}
+    </div>
+
+    <div class="g-table">
+        <div class="g-table__row">
+            {{> c-link newContext href="/profile/edit" label="Изменить данные"}}
+        </div>
+        <div class="g-table__row">
+            {{> c-link newContext href="/profile/change-password" label="Изменить пароль"}}
+        </div>
+        <div class="g-table__row">
+            {{> c-button newContext label="Выйти" theme="danger" skin="link"}}
+        </div>
+    </div>
+</div>

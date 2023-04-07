@@ -1,0 +1,15 @@
+<div class="{{block}}">
+    <div class="{{ classElement block "side"}}">
+        {{> c-chat-list-toolbar newContext}}
+        {{> c-chat-list newContext data=conversations active=activeConversation}}
+    </div>
+    <section  class="{{ classElement block "conversation"}}">
+        {{#if activeConversation}}
+            {{> c-chat-conversation-toolbar newContext data=activeConversation}}
+            {{> c-chat-conversation newContext data=activeConversation}}
+            {{> c-chat-message-input newContext data=activeConversation}}
+        {{else}}
+            Выберите чат чтобы отправить сообщение
+        {{/if}}
+    </section>
+</div>

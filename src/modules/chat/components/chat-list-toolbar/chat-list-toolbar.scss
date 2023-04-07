@@ -1,0 +1,53 @@
+@use 'src/themes/colors' as c;
+
+.c-chat-list-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid c.$disabled;
+
+  &__navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__tools {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__searchbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    height: 37px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0 10px;
+    background-color: c.$light-primary;
+
+    &-label {
+      display: flex;
+      align-items: center;
+    }
+
+    & .c-input {
+      width: 100%;
+      &__field {
+        border: none;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

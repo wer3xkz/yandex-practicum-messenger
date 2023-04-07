@@ -1,0 +1,45 @@
+
+
+@mixin icon-size($size: 24px) {
+  width: $size;
+  height: $size;
+  background-size: contain;
+}
+
+.c-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &[data-name="attach"] {
+    background-image: url("./assets/icons/attach.svg");
+  }
+  &[data-name="more"] {
+    background-image: url("./assets/icons/more.svg");
+  }
+  &[data-name="send"] {
+    background-image: url("./assets/icons/send.svg");
+  }
+  &[data-name="search"] {
+    background-image: url("./assets/icons/search.svg");
+  }
+  &[data-name="arrow"] {
+    background-image: url("./assets/icons/arrow.svg");
+  }
+  &[data-name="no-photo"] {
+    background-image: url("./assets/icons/no-photo.svg");
+  }
+
+  @include icon-size;
+
+  &_size {
+    &_large {
+      @include icon-size(32px);
+    }
+    &_small {
+      @include icon-size(14px);
+    }
+  }
+}

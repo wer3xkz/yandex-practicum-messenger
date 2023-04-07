@@ -1,0 +1,20 @@
+@use 'src/themes/colors' as c;
+
+.c-avatar {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  background-color: c.$disabled;
+  overflow: hidden;
+
+  &_size {
+    &_small {
+      width: 34px;
+      height: 34px;
+    }
+    &_large {
+      width: 130px;
+      height: 130px;
+    }
+  }
+}

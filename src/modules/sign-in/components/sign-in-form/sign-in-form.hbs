@@ -1,0 +1,16 @@
+<div class="{{block}}">
+    <form class="{{classElement block "form"}}">
+        {{> c-input newContext id="email" name="email" label="Ваша почта" placeholder="Почта"}}
+        {{> c-input newContext id="login" name="login" label="Ваш логин" placeholder="Логин"}}
+        {{> c-input newContext id="first_name" name="first_name" label="Ваше имя" placeholder="Имя"}}
+        {{> c-input newContext id="second_name" name="second_name" label="Ваша фамилия" placeholder="Фамилия"}}
+        {{> c-input newContext id="phone" name="phone" label="Ваш телефон" placeholder="Телефон"}}
+        {{> c-input newContext id="password" name="password" label="Ваш пароль" placeholder="Пароль" type="password"}}
+        {{> c-input newContext id="repeatPassword" name="repeatPassword" label="Пароль (ещё раз)" placeholder="Пароль" type="password"}}
+
+        <div class="{{classElement block "actions"}}">
+            {{> c-button newContext label="Зарегистрироваться" type="submit"}}
+            {{> c-link newContext label="Войти" href="/login"}}
+        </div>
+    </form>
+</div>

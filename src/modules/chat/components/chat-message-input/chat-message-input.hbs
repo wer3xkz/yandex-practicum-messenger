@@ -1,0 +1,10 @@
+<div class="{{block}}">
+    <div class="{{classElement block "attachment"}}">
+        {{> c-button newContext skin="fab" icon="attach" iconSize="large"}}
+    </div>
+
+    <form class="{{classElement block "form"}}" action="">
+        {{> c-input newContext placeholder="Сообщение..." name="message" id="message-input-field"}}
+        {{> c-button newContext skin="fab" icon="send" iconSize="large" type="submit"}}
+    </form>
+</div>
